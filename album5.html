@@ -1,0 +1,62 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>album de Kamren</title>
+</head>
+<head>
+<body>
+    <style>
+        body{
+            background-color: rgb(46, 46, 46);
+            color:white;
+        }
+        table thead{
+            background-color: #353535;
+            color: white;
+        }
+    </style>
+  </head>
+  <body>
+    <body
+    style="font-size:160%;color:rgb(218, 89, 196)"><a style="color: floralwhite;" class="decoration_none" href="usuarios.html"><h2 class="color_black font_medium font_sm">volver</h2></a></div></div></article></div>
+    <div class="container mt-4 shadow-lg p3 mb-5 bg-body rounded">
+        <table class="table table-bordered table-striped">
+            <tbody id="data" style="background-color: azure; font-size:160%;color:rgb(218, 89, 196)"><a style="color: floralwhite;" class="decoration_none" href="albumes.html"><h2 class="color_black font_medium font_sm">Albumes</h2></a></div></div></article></div>
+            </tbody>
+
+        </table>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+
+    <script>
+        let url = 'https://jsonplaceholder.typicode.com/users/5/albums'
+        fetch(url)
+            .then(response => response.json())
+            .then(data => mostrarData(data))
+            .catch(error => console.log(error))
+			
+        const mostrarData = (data) => {
+            console.log(data)
+            let body = ''
+            for (let i = 1; i<data.length; i++){
+                body = `<tr>${data[0].id}.-${data[0].title}</td>
+<li><a href="fotos41.html">Ver fotos</a></li>${data[1].id}.-${data[1].title}</td>
+<li><a href="fotos42.html">Ver fotos</a></li>${data[2].id}.-${data[2].title}</td>
+<li><a href="fotos43.html">Ver fotos</a></li>${data[3].id}.-${data[3].title}</td>
+<li><a href="fotos44.html">Ver fotos</a></li>${data[4].id}.-${data[4].title}</td>
+<li><a href="fotos45.html">Ver fotos</a></li>${data[5].id}.-${data[5].title}</td>
+<li><a href="fotos46.html">Ver fotos</a></li>${data[6].id}.-${data[6].title}</td>
+<li><a href="fotos47.html">Ver fotos</a></li>${data[7].id}.-${data[7].title}</td>
+<li><a href="fotos48.html">Ver fotos</a></li>${data[8].id}.-${data[8].title}</td>
+<li><a href="fotos49.html">Ver fotos</a></li>${data[9].id}.-${data[9].title}</td>
+<li><a href="fotos50.html">Ver fotos</a></li></tr>`                
+            }
+            document.getElementById('data').innerHTML = body
+        }            
+    </script>
+</body>
+</html>
